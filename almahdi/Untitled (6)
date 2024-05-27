@@ -1,0 +1,22 @@
+def main():
+    fileName1='e:\\quiz.csv'
+    fileName2='e:\\quiz2.csv'
+    UserName=quize(fileName1, 0)
+    Question=quize(fileName1, 1)
+    Answer=quize(fileName1, 2)
+    file2=open(fileName2, 'w')
+    for i in range(21):
+        x=f(UserName[i], Question[i], Answer[i])
+        y=writeInFile(file2, UserName[i], Answer[i])
+def quize(f1, n):
+    file1= open(f1, 'r')
+    return[line.split(',')[n] for line in file1]
+def f(a, b, c):
+    print(a, ":",b)
+    print("My Father's Name is ", c)
+def writeInFile(f2, a, b):
+    f2.write(a)
+    f2.write(", ")
+    f2.write(b)
+main()
+

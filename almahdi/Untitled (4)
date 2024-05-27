@@ -1,0 +1,14 @@
+def factorial(x):
+    if x<0:
+        return 0
+    elif (x==0 or x==1) :
+        return 1
+    else:
+        return x*factorial(x-1)
+EntiredNum=input("enter your number: ") 
+print("factorial of your EntiredNum is :" , factorial(EntiredNum))
+
+        
+
+
+

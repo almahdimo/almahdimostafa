@@ -1,0 +1,23 @@
+
+s=input("Enter your binary number: ")
+def convert(num):
+    for m in range(len(num)):
+        x=int(num[m])
+        if (x!=0 and x!=1):
+            test=False
+        else:
+            test=True
+    if (test==False):
+        return("oops!! you must Enter a binary number")
+    else:
+        i ,n ,out=-1 ,1 ,0
+        for l in range(len(num)):
+            out+=n*int(num[i])
+            n*=2
+            i-=1
+        print("Your Dicimal number is : ", end=" ")
+        return out
+print(convert(s))
+
+
+
